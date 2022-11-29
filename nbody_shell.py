@@ -48,6 +48,7 @@ while i<num_char:
 
 
 Farr = arrow(color=color.red)
+Parr = arrow(color=color.blue)
 
 ## try various initial electron velocities
 v_elec = vector(0,1,0)
@@ -91,6 +92,8 @@ while t < tmax:
     Farr.pos = elec.pos
     Farr.axis = F_net*Fscale
     print("FARR: ", Farr.axis)
+    Parr.pos = elec.pos
+    Parr.axis = p_elec*1e14
 
     #Leaves domain?
     if  abs(elec.pos.x) > 200 or abs(elec.pos.y) > 200 or abs(elec.pos.z) > 200:
